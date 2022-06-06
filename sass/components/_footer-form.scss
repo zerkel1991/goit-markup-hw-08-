@@ -1,0 +1,54 @@
+/* ФОРМА В ФУТЕРЕ */
+.form-container{
+    margin-left: 93px;
+  }
+  .footer-form{
+    display: flex;
+  }
+  .footer-form__label{
+    display: flex;
+  }
+  .footer-form__input{
+    display: block;
+    margin-right: 12px;
+    width: 358px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffff;
+    border-radius: 4px;
+    padding: 15px;
+  }
+  /* КНОПКА И ЕЕ ТЕКСТ+ИКОНКА */
+  .form__button{
+    position: relative;
+    background-color: #2196f3;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    border: none;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: $cubic;
+  }
+  .button__text{
+    padding: 10px 62px 10px 29px;
+  }
+  .button__icon{
+    position: absolute;
+    top: 13px;
+    right: 28px;
+    fill: #ffff;
+  }
+  .form__button:hover,.form__button:focus{
+    background-color:#188ce8;
+  }
+  

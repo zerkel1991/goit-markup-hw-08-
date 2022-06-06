@@ -1,0 +1,103 @@
+/**
+|============================
+|Секция ПОРТФОЛИО
+|============================
+*/
+/* Кнопки фильтра */
+.filter-button-list{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .filter-button__item:not(:last-child){
+    margin-right: 8px;
+  }
+  .filter-button{
+    color: $brandblack;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.62;
+    padding: 6px 22px;
+    border: none;
+    transition: color 250ms $cubic,
+    background-color 250ms $cubic,
+    box-shadow 250ms $cubic;
+  }
+  .filter-button--active{
+    color: white;
+    background-color: $brandblue;
+  }
+    .filter-button{
+      &:hover,&:focus{
+        color: white;
+        background-color: $brandblue;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.423);
+        outline: none;
+      }
+  }
+ /* Элементы фильтра */
+  .filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .filter-item{
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: $cubic;
+  }
+  .filter-item:nth-child(n+4){
+    margin-top: 30px;
+  }
+.submenu{
+    position: relative;
+    background-color: rgba(33, 150, 243, 0.9);
+    overflow: hidden;
+  }
+  .submenu__img {
+    display: block;
+  }
+  .submenu__text{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    transform: translateY(0);
+    padding: 63px 24px;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    background-color: rgba(33, 150, 243, 0.9);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: $cubic;
+  }
+  .filter-item-text__container{
+    padding: 20px 24px;
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+  }
+  .filter__title{
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+  }
+  .filter__text{
+    color: $brandgrey;
+    font-size: 16px;
+    line-height: 1.87;
+    margin-bottom: 0;
+  }
+  .filter-item:hover {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.423);
+  }
+  .filter-item:hover .submenu__text {
+    transform: translateY(-100%);
+  }

@@ -1,0 +1,44 @@
+/**
+|============================
+МОДАЛЬНОЕ ОКНО
+|============================
+*/
+
+  .modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    max-height: 581px;
+    padding: 40px;
+    opacity: 1;
+    visibility: visible;
+    background-color: #ffffff;
+  }
+  .modal__button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 0.1);}
+  
+    .modal__icon {
+      transition-property: fill;
+      transition-duration: 250ms;
+      transition-timing-function: $cubic;
+    }
+    
+  .modal__icon{
+    .modal__button:hover &,
+    .modal__button:focus &{
+        fill:$brandblue;
+    }
+  }

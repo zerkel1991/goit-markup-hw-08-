@@ -1,0 +1,58 @@
+/**
+|============================
+|Секция Преимущества
+|============================
+*/
+/* Переменные списка для сетки */
+.benefits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Класс для скрытия */
+  .hidden {
+    appearance: none;
+    position: absolute;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+  /* Геометрия секции преимущества */
+  .benefits-section {
+    text-align: center;
+    padding-top: 94px;
+  }
+  .benefits__items:not(:last-child){
+    margin-right: 30px;
+  }
+  /* Контейнер для иконок */
+  .benefits__container {
+    display: flex;
+    width: 270px;
+    height: 120px;
+    background-color: #f5f4fa;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Заголовки преимущества */
+  .benefits__title {
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1.14;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  /* Параграфы преимущества */
+  .benefits__text {
+    color: $brandgrey;
+    line-height: 1.71;
+    text-align: left;
+  }

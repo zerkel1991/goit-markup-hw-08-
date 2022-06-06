@@ -1,0 +1,58 @@
+/**
+|============================
+|Секция HERO
+|============================
+*/
+/* фон-размеры секции герой */
+.hero-section {
+    max-width: 1600px;
+    margin: 0 auto;
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/hero-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding: 200px 0;
+    text-align: center;
+  }
+  /* заголовок секции герой */
+  .hero__title {
+    color: #ffffff;
+    font-size: 44px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 696px;
+  }
+  /* Мейн стиль кнопок */
+  .btn {
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+  }
+  /* Геометрия для кнопки герой */
+  .hero__btn {
+    width: 200px;
+    height: 50px;
+  }
+  /* Шрифты цвет анимания для кнопки герой */
+  .hero__btn--colors-fonts {
+    background-color: $brandblue;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    transition: background-color 250ms $cubic;
+  }
+  /* ховер-фокус кнопки герой */
+.hero__btn{
+      &:hover,&:focus{
+          background-color: #188ce8;
+      }
+  }

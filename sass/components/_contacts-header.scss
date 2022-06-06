@@ -1,0 +1,37 @@
+/* Геометрия для телефон+мыло */
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+  }
+  /* Геометрия для контактов хедера */
+  .contacts__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contacts__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .contacts__link {
+    display: inline-flex;
+    align-items: center;
+    padding: 32px 0;
+  }
+  /* Цвет контактов в хедере */
+  .contacts-link--primary-color {
+    color: $brandgrey;
+    transition: color 250ms $cubic;
+  }
+  /* Иконки в хедере */
+  .contacts__icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+  /* Ховер-фокус на контактах */
+    .contacts__link{
+      &:hover,&:focus{
+          color:$brandblue;
+      }
+  }

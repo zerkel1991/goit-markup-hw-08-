@@ -1,0 +1,94 @@
+/**
+|============================
+|Секция Команда
+|============================
+*/
+/* Общая ячейка члена команды */
+.team {
+    background-color: #f5f4fa;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .team__list {
+    display: flex;
+    justify-content: center;
+  }
+  /* оформление ячейки команды */
+  .team__item {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* падинги для ящика с описанием члена команды */
+  .team__container {
+    padding: 30px;
+  }
+  .team__item:not(:last-child){
+    margin-right: 30px;
+  
+  }
+  /* имя члена команды */
+  .section__title--team {
+    color: $brandblack;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.16;
+    margin-bottom: 10px;
+  }
+  /* Должность */
+  .section__text {
+    color: $brandgrey;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.18;
+  }
+  /* Ящик для иконок соц сетей */
+  .social {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  /* отступы соц иконок */
+  .social__items:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  /* Оформление коробок иконок */
+  .social__links {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    outline-style: none;
+    border-style: none;
+    border-radius: 50%;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: $cubic;
+  }
+  .icons {
+    fill: #afb1b8;
+  }
+  /* Фокус-ховер на рамках вокруг иконок */
+    .social__links{
+      &:hover,&:focus{
+        outline-style: none;
+        border-style: none;
+        border-radius: 50%;
+        background-color: $brandblue;
+      }
+  }
+  
+  /* фовер-фокус цвет самих иконок */
+        .icons{
+            .social__links:hover &,
+            .social__links:focus &{
+        fill: #ffffff;
+    }
+  }
