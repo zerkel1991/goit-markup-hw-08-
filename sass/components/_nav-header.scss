@@ -3,7 +3,13 @@
     display: flex;
     justify-items: center;
     align-items: center;
+    
+    
+    @media screen and (max-width: 768px) {
+        display: none;
+      }
   }
+
   
   /* Отступ между элементами навигации */
   .nav-header__item:not(:last-child) {

@@ -3,17 +3,25 @@
 |Секция Чем мы занимаемся
 |============================
 */
-/* Общий класс секций с падингами */
 .section {
-    padding: 94px 0;
-  }
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
+}
+
+/* Общий класс секций с падингами */
+.section{
+  padding: 94px 0;
+}
+
   /* заголовки h2 */
   .section__title--big {
-    font-size: 36px;
+    font-size: 28px;
     text-align: center;
     line-height: 1.16;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
+
   /* маленькие текст в секции */
   .section__title {
     display: flex;

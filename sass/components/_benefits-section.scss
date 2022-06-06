@@ -3,12 +3,6 @@
 |Секция Преимущества
 |============================
 */
-/* Переменные списка для сетки */
-.benefits {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   /* Класс для скрытия */
   .hidden {
     appearance: none;
@@ -27,29 +21,25 @@
   /* Геометрия секции преимущества */
   .benefits-section {
     text-align: center;
-    padding-top: 94px;
-  }
-  .benefits__items:not(:last-child){
-    margin-right: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   /* Контейнер для иконок */
   .benefits__container {
-    display: flex;
-    width: 270px;
-    height: 120px;
     background-color: #f5f4fa;
     margin-bottom: 30px;
-    justify-content: center;
-    align-items: center;
   }
   /* Заголовки преимущества */
   .benefits__title {
     font-size: 14px;
     text-transform: uppercase;
     line-height: 1.14;
-    text-align: left;
+    text-align: center;
     margin-bottom: 10px;
   }
+
+
+
   /* Параграфы преимущества */
   .benefits__text {
     color: $brandgrey;

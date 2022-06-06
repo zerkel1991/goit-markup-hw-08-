@@ -4,6 +4,10 @@
     justify-content: space-between;
     align-items: center;
     margin-left: auto;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+      }
   }
   /* Геометрия для контактов хедера */
   .contacts__item {
