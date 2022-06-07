@@ -2,6 +2,18 @@
     max-width: 450px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 15px;
-}
+    padding: 60px 15px;
+
+
+    @media screen and(min-width:760px){
+        max-width: 738px;
+    }
+
+    @media screen and(min-width:1200px){
+        max-width: 1200px;
+    }
+        
+    }
+   
+
 

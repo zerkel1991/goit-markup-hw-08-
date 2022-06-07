@@ -5,6 +5,7 @@
     border-bottom: 1px solid #ececec;
     }
 .header__button{
+    padding: 10px 0;
     background-color: transparent;
     border:none;
         @media screen and (min-width: 768px) {
@@ -17,6 +18,7 @@
 }
 // Ящик для лого кнопки и навигации и тд
 .header-container{
+    padding: 0 15px;
     display: flex;
     align-items: center;
     justify-content:space-between ;
