@@ -1,9 +1,11 @@
-    $brandblue: #2196f3;
-    $brandgrey: #757575;
-    $brandblack: #212121;
-    $brandbackground: #2f303a;
-    $footergrey: rgba(255, 255, 255, 0.6);
-    $cubic: cubic-bezier(0.4, 0, 0.2, 1);
-    $primary-font: 'Roboto', sans-serif;
-    $font-logo: 'Raleway', sans-serif;
-  
+$primary-text-color: #212121;
+$secondary-text-color: #757575;
+$accent-color: #2196f3;
+$bcg-color: #2f303a;
+$primary-letter-spacing: 0.03em;
+$secondary-letter-spacing: 0.02em;
+$hero-letter-spacing: 0.06em;
+$transition-duration: 250ms;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+$font-family: Roboto, sans-serif;
+$linear-gradient: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));

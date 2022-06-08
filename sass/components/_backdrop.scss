@@ -1,0 +1,283 @@
+// Backdrop с модалкой
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    overflow-y: scroll;
+  
+    opacity: 1;
+    transition: opacity $timing-function $transition-duration, visibility $timing-function $transition-duration;
+  }
+  
+  .is-hidden {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+  }
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+  
+    background-color: #FFFFFF;
+  
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $timing-function $transition-duration;
+  
+    @media screen and (max-width: 479.98px) {
+      width: 90vw;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      font-size: 12px;
+    }
+  
+    @media screen and (min-width: 480px) {
+      width: 450px;
+      padding: 40px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      width: 528px;
+    }
+  }
+  
+  
+  .is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  
+  .modal__title {
+    display: block;
+  
+    @media screen and (max-width: 479.98px) {
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+  
+    @media screen and (min-width: 480px) {
+      margin-bottom: 30px;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      line-height: 1.15;
+    }
+  }
+  
+  .modal__field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  
+  
+    &--checkbox {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      font-size: 12px;
+      line-height: 1.16;
+  
+      @media screen and (min-width: 1200px) {
+        line-height: 1.71;
+        font-size: 14px;
+      }
+    }
+  }
+  
+  .modal__label {
+    position: absolute;
+    top: 0;
+  
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $secondary-text-color;
+  
+    transform: translateY(-18px);
+  }
+  
+  .modal__input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 28px;
+    padding-left: 42px;
+    outline: none;
+  
+    transition: border-color $transition-duration $timing-function;
+    cursor: pointer;
+  
+    &:focus {
+      border-color: $accent-color;
+      border-width: 1px;
+    }
+  }
+  
+  .modal__svg {
+    position: absolute;
+    top: 17%;
+    left: 15px;
+  
+    margin-right: 12px;
+    transition: fill $transition-duration $timing-function;
+  }
+  
+  .modal__field:focus-within .modal__svg {
+    fill: $accent-color;
+  }
+  
+  .modal__textarea {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 120px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    outline: none;
+    resize: none;
+  
+    transition: border-color $transition-duration $timing-function;
+  
+  
+    &:focus {
+      border-color: $accent-color;
+      border-width: 1px;
+    }
+  }
+  
+  .modal__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  
+  
+    &:checked + .modal__icon {
+      background-color: $accent-color;
+      border-color: $accent-color;
+  
+      background-image: url(../images/full-check.svg);
+      background-size: contain;
+  
+      background-origin: border-box;
+      transition: background-color $transition-duration $timing-function,
+      border-color $transition-duration $timing-function,
+      background-image $transition-duration $timing-function;
+    }
+  }
+  
+  .modal__icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+  
+    border: 1px solid $primary-text-color;
+    border-width: 2px;
+    border-radius: 2px;
+  
+    transition: background-color $transition-duration $timing-function, border-color $transition-duration $timing-function,
+    background-image $transition-duration $timing-function;
+  
+    @media screen and (max-width: 479.98px) {
+      width: 14px;
+      height: 13px;
+      margin-right: 3px;
+    }
+  }
+  
+  .modal__policy {
+    display: flex;
+    align-items: center;
+    color: $secondary-text-color;
+    cursor: pointer;
+  
+    @media screen and (max-width: 479.98px) {
+      display: inline-block;
+  
+    }
+  }
+  
+  .modal__conditions {
+    color: $accent-color;
+  }
+  
+  .modal__button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 55px;
+    padding-right: 55px;
+  
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: $hero-letter-spacing;
+  
+    background: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    color: #ffffff;
+  
+    cursor: pointer;
+    transition: background-color $transition-duration $timing-function;
+  
+    &:hover,
+    &:focus {
+      background-color: #188CE8;
+    }
+  }
+  
+  .modal__button-close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    right: 8px;
+  
+    background-color: #FFFFFF;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    fill: #000000;
+  
+    cursor: pointer;
+    transition: fill $transition-duration $timing-function;
+  
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+    }
+  
+    @media screen and (max-width: 479.98px) {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  
+  
+  

@@ -1,9 +1,19 @@
+
 body {
-    margin: 0;
-    font-family:$primary-font;
-    font-size: 14px;
-    color: $brandblack;
-    background-color: #ffffff;
-    letter-spacing: 0.03em;
-  }
+  color: $primary-text-color;
+  background-color: #fff;
+
+  font-size: 14px;
+  font-family: $font-family;
+  letter-spacing: $primary-letter-spacing;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
   
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
