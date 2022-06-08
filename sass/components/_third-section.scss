@@ -41,6 +41,10 @@
 
 .section-third__title {
   @extend %section-title;
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .employee {
