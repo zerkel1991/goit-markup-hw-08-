@@ -1,0 +1,98 @@
+// Контакты: почта / телефон
+
+.contact {
+    letter-spacing: $secondary-letter-spacing;
+    font-weight: 500;
+    line-height: 1.14;
+  
+    @media screen and (max-width: 767.98px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+  
+  .contact-container {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  .contact__icon {
+    fill: $secondary-text-color;
+  
+    &:hover{
+      fill: $accent-color;
+    }  
+  }
+  
+  .contact__link {
+    display: flex;
+    align-items: center;  
+    line-height: 1.16;
+  
+    color: $secondary-text-color;
+    text-decoration: none;
+  
+    transition-property: color;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+  
+    &:hover {
+      color: $accent-color;
+    }
+  
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      font-size: 12px;
+      line-height: 1.16;
+      margin-bottom: 10px;
+    }
+  } 
+  
+  .contact__link--phone {
+    @media screen and (max-width: 767.98px) {
+      font-size: 34px;
+      line-height: 1.17;
+      color: $accent-color;
+      margin-bottom: 32px;
+    }
+  
+    @media screen and (max-width: 479.98px) {
+      font-size: 21px;
+    }
+  }
+  
+  .contact__link--mail {
+    @media screen and (max-width: 767.98px) {
+      font-size: 24px;
+      line-height: 1.16;
+      margin-bottom: 64px;
+    }
+  
+    @media screen and (max-width: 479.98px) {
+      font-size: 19px;
+    }
+  }
+  
+  .contact__svg {
+    margin-right: 10px;
+  
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+    transition-property: fill;
+  
+    @media screen and (max-width: 767.98px) {
+      display: none;
+    }
+  }
+  
+  .contact__item + .contact__item {
+    @media screen and (min-width: 1200px) {
+      margin-left: 30px;
+    }
+  }
+  

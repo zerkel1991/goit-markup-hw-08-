@@ -1,0 +1,82 @@
+// Секция hero
+
+.hero {
+    padding: 118px 0px;
+    margin: auto;
+    text-align: center;
+  
+    @media screen and (min-width: 1200px) {
+      padding: 200px 0px;
+      max-width: 1600px;
+    }
+  
+    &__title {
+      margin: 0 auto 30px;
+  
+      letter-spacing: $hero-letter-spacing;
+      font-weight: 900;
+      font-size: 26px;
+      max-width: 360px;
+      line-height: 1.6;
+      text-align: center;
+      text-transform: uppercase;
+  
+      color: #ffffff;
+  
+      @media screen and (min-width: 1200px) {
+        font-size: 44px;
+        max-width: 696px;
+        line-height: 1.36;
+      }
+    }
+  }
+  
+  .hero {
+    background-image: $linear-gradient, 
+    url('../images/jpg/bcg/bcg-img-mob.jpg');
+    height: auto;
+    background-size: cover;
+    background-color: $bcg-color;
+  }
+  
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .hero {
+      background-image: $linear-gradient, 
+      url('../images/jpg/bcg/bcg-img-mob@2x.jpg');
+    }
+  }
+  
+  @media (min-width: 480px) {
+    .hero {  
+      background-image: $linear-gradient, 
+      url('../images/jpg/bcg/bcg-img-tab.jpg');
+    }
+  
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      .hero {
+        background-image: $linear-gradient, 
+        url('../images/jpg/bcg/bcg-img-tab@2x.jpg');
+      }
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .hero {  
+      background-image: $linear-gradient, 
+      url('../images/jpg/bcg/bcg-img-desk.jpg');
+    }
+  
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      .hero {
+        background-image: $linear-gradient, 
+        url('../images/jpg/bcg/bcg-img-desk@2x.jpg');
+      }
+    }
+  }
+  

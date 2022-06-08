@@ -1,0 +1,84 @@
+// Четвертая секция
+
+.section-fourth {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  
+    @media screen and (min-width: 1200px) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
+  }
+  
+  .section-fourth__title {
+    @extend %section-title;
+  }
+  
+  .section-fourth__clients {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  
+    @media screen and (max-width: 479.98px) {
+      display: block;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+    }
+  }
+  
+  .section-fourth__item {
+    margin: 15px; 
+    
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 6 * 30px) / 6);
+      height: 92px;
+    
+      cursor: pointer;
+    }
+  }
+  
+  .section-fourth__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+  
+    transition-property: border;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+  
+    @media screen and (max-width: 479.98px) {
+      width: 100%;
+    }
+  
+    @media screen and (min-width: 768px) {
+      width: 226px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      width: 170px;
+    }
+  
+    .section-fourth__item:hover &,
+    .section-fourth__item:focus & {
+      border: 1px solid $accent-color;
+    }
+  }
+  
+  .section-fourth__svg {
+    fill: #afb1b8;
+  
+    transition-property: fill;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+  
+    .section-fourth__link:hover &,
+    .section-fourth__link:focus & {
+      fill: $accent-color;
+    }
+  }

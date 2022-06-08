@@ -1,0 +1,113 @@
+/ Третья секция
+
+.section-third {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f5f4fa;
+}
+
+.section-third__employees {
+  background-color: #ffffff;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px; 
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767.98px) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.section-third__team {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+.section-third__employees {
+  @media screen and (min-width: 768px) {
+    margin: 15px;
+
+    width: calc((100% - 2 * 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 4 * 30px) / 4);
+  }
+}
+
+.section-third__title {
+  @extend %section-title;
+}
+
+.employee {
+  padding-top: 30px;
+  padding-bottom: 24px;
+
+
+  &__name {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+  }
+
+  &__text {
+    color: $secondary-text-color;
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+  }
+}
+
+.social-network {
+  display: flex;
+  justify-content: center;
+
+  &__list:not(:first-child) {
+  margin-left: 10px;
+  }
+
+  &__list {
+    @extend %list;
+  }
+}
+
+.social-network__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition-property: background-color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.social-network__svg {
+  fill: #afb1b8;
+  transition: fill $transition-duration $timing-function;
+
+
+  .social-network__link:hover &,
+  .social-network__link:focus & {
+    fill: #ffffff;
+  }
+}

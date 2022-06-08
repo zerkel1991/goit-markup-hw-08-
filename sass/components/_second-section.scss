@@ -1,0 +1,54 @@
+// Вторая секция
+
+.section-second {
+    padding-bottom: 94px;
+  
+    // Конкретно на 1199px видно баг
+    @media screen and (max-width: 1199.98px) {
+      display: none;
+    }
+  }
+  
+  .section-second__title {
+    @extend %section-title;
+  }
+  
+  
+  .section-second__services {
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      margin: -15px;
+    }
+  }
+  
+  .section-second__item {
+    @media screen and (min-width: 1200px) {
+      position: relative;
+      width: calc((100% - 3 * 30px) / 3);
+      margin: 15px;
+    }
+  }
+  
+  .section-second__label {
+    @media screen and (min-width: 1200px) {
+      position: absolute;
+      width: 370px;
+      height: 70px;
+      bottom: 0px;
+      background-color: rgba(48, 48, 58, 0.8);
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.14;
+      text-transform: uppercase;
+    }
+  }
+  
+  
+  
+  
+  
